@@ -1,6 +1,6 @@
-const handleClick = (event) => {
+const displayFibbs = (event) => {
   event.preventDefault()
-  const input = doceument.querySelector('input')
+  const input = document.querySelector('input')
   const n = parseInt(input.value)
 
 
@@ -18,6 +18,7 @@ const handleClick = (event) => {
     list.appendChild(li)
   }
 }
+
 const fibbonaci = (n) =>{
   let sequence = []
   let temp
@@ -25,18 +26,19 @@ const fibbonaci = (n) =>{
   let b = 1
 
   while (n >= 0) {
-   seqence.push(a)
-   temp = 1
+   sequence.push(a)
+   temp = a
    a = a + b
    b = temp
    n--
   }
+
   return sequence
 }
 
 const main = () => {
-  const button = document.querySelector('button')
-  button.addEventListener('click', handleClick)
+  const input = document.querySelector('input')
+  input.addEventListener('change', displayFibbs)
 }
 
   //document.getElementById('root').textContent = 'Hello, World!'

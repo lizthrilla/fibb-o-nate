@@ -6,3 +6,18 @@ body {
   margin: 0;
   font: 16px / 1 sans-serif;
 }
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding, left: 0;
+  list-style: none;
+}
+li {
+  display: inline;
+  margin: 0.1em 0.2em;
+  font-family: monospace;
+}
+
+li:not(:last-child)::after{
+  content: ', '
+}
